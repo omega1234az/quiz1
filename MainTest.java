@@ -7,7 +7,7 @@ public class MainTest {
     public void testCalculateWaterBill() {
         main.currentWater = 30;
         main.lastWater = 20;
-        int expectedWaterBill = (30 - 20) * 5; // 50
+        int expectedWaterBill = (30 - 20) * 5; 
         assertEquals(expectedWaterBill, main.calculateWaterBill());
     }
 
@@ -15,7 +15,7 @@ public class MainTest {
     public void testCalculateWaterBillNegativeCase() {
         main.currentWater = 20;
         main.lastWater = 30;
-        int expectedWaterBill = 0; // No negative billing
+        int expectedWaterBill = 0; 
         assertEquals(expectedWaterBill, main.calculateWaterBill());
     }
 
@@ -23,7 +23,7 @@ public class MainTest {
     public void testCalculateElectricityBill() {
         main.currentElectricity = 50;
         main.lastElectricity = 30;
-        int expectedElectricityBill = (50 - 30) * 6; // 120
+        int expectedElectricityBill = (50 - 30) * 6; 
         assertEquals(expectedElectricityBill, main.calculateElectricityBill());
     }
 
@@ -31,7 +31,7 @@ public class MainTest {
     public void testCalculateElectricityBillNegativeCase() {
         main.currentElectricity = 30;
        main.lastElectricity = 50;
-        int expectedElectricityBill = 0; // No negative billing
+        int expectedElectricityBill = 0;
         assertEquals(expectedElectricityBill, main.calculateElectricityBill());
     }
 
@@ -42,7 +42,7 @@ public class MainTest {
         main.currentWater = 30;
         main.lastWater = 10;
 
-        int expectedBill = 1500 + (50 - 30) * 6 + (30 - 10) * 5; // 1500 + 120 + 100 = 1720
+        int expectedBill = 1500 + (50 - 30) * 6 + (30 - 10) * 5; 
         assertEquals(expectedBill, main.calculateResultBill("S"));
     }
 
@@ -53,7 +53,7 @@ public class MainTest {
         main.currentWater = 40;
         main.lastWater = 20;
 
-        int expectedBill = 2000 + (70 - 50) * 6 + (40 - 20) * 5; // 2000 + 120 + 100 = 2220
+        int expectedBill = 2000 + (70 - 50) * 6 + (40 - 20) * 5; 
         assertEquals(expectedBill, main.calculateResultBill("D"));
     }
 }
